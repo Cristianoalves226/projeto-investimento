@@ -13,8 +13,11 @@
 
 
 
-Route::get('/',['uses'=>'Controller@homepage']);
-Route::get('/cadastro',['uses'=>'Controller@cadastrar']);
-Route::get('/login',['uses'=>'Controller@fazerLogin']);
+Route::get('/', ['uses' => 'Controller@homepage']);
+Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
 
-
+/*
+-----------------------Routas para auth--------------------- 
+*/
+Route::get('/login', ['uses' => 'Controller@fazerLogin']);
+Route::get('/login', ['as'=>'user.login' ,'uses' => 'Controller@fazerLogin']);
